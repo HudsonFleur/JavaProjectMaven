@@ -1,6 +1,7 @@
 package javaDay6;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -72,5 +73,12 @@ public class Exercise1 {
 		personMap.put("Daisy", 24);
 		personMap.put("John", 27);
 		System.out.println("Size of mapping is: " + personMap.size());
+		
+		// Exercise 7
+		// Exercise 8
+		
+		// Exercise 9
+		Calendar cal = Calendar.getInstance();
+		System.out.println(cal.getInstance().getTime());
 	}
 }
