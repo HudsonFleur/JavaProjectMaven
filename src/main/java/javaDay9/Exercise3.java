@@ -4,14 +4,11 @@ public class Exercise3 implements Runnable {
 
 	public Exercise3() {
 		// TODO Auto-generated constructor stub
-		
 		Thread t1 = new Thread(myRunnable);
 		t1.start();
-		//run();
 	}
 	
 	Runnable myRunnable = new Runnable() {
-		
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
@@ -27,20 +24,16 @@ public class Exercise3 implements Runnable {
 		}
 	};
 
-	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
 
 	public static void main(String[] args) {
 
 		Exercise3 e1 = new Exercise3();
 		Exercise3 e2 = new Exercise3();
 		Exercise3 e3 = new Exercise3();
-	}
-
-
-
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		
 	}
 }
