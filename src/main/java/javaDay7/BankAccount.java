@@ -1,6 +1,6 @@
 package javaDay7;
 
-public class BankAccount {
+public abstract class BankAccount {
 
 	private String owner;
 	private double balance;
