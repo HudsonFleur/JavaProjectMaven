@@ -2,8 +2,10 @@ package javaDay11;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -76,7 +78,15 @@ public class Exercise6 {
 										obj -> obj.getQuantity(),
 										obj -> obj.getPartDescription(), 
 										(o1, o2) -> o1 + ";" + o2));
-	System.out.println(mapInovicesMap);
+		Map sorted = mapInovicesMap.entrySet()
+								.stream()
+								//.sorted(Map.Entry.comparingByKey())
+								.collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(),
+								(e1, e2) -> e2, TreeMap::new));
+		
+		System.out.println(sorted);
+		
+		// Exercise 6.4
 		
 	}
 }
